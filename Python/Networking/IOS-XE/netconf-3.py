@@ -5,17 +5,8 @@ router = {"host": "sandbox-iosxr-1.cisco.com", "port": "830",
           "username": "admin", "password": "C1sco12345"}
 
 netconf_filter = """
- <filter>
-  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet0/0/0/1</name>
-    </interface>
-  </interfaces>
-  <interfaces-state xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet0/0/0/1</name>
-    </interface>
-  </interfaces-state>
+<filter>
+  <router xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-um-router-static-cfg"/>
 </filter>
 """
 

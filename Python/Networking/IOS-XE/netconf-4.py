@@ -13,17 +13,8 @@ print(router["username"])
 print(router["password"])
 
 netconf_filter = """
- <filter>
-  <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet2</name>
-    </interface>
-  </interfaces>
-  <interfaces-state xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
-    <interface>
-      <name>GigabitEthernet2</name>
-    </interface>
-  </interfaces-state>
+<filter>
+  <router xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-um-router-static-cfg"/>
 </filter>
 """
 
