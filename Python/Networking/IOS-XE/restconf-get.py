@@ -2,8 +2,8 @@ import requests
 import json
 
 # set up connection parameters in a dictionary
-router = {"ip": "ios-xe-mgmt.cisco.com", "port": "9443",
-          "user": "root", "password": "D_Vay!_10&"}
+router = {"ip": "devnetsandboxiosxe.cisco.com", "port": "9443",
+          "user": "admin", "password": "C1sco12345"}
 
 # set REST API headers
 headers = {"Accept": "application/yang-data+json",
