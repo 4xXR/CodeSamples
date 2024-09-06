@@ -19,7 +19,7 @@ orgs = meraki.organizations.get_organizations()
 for org in orgs:
     if org['name'] == "DevNet Sandbox":
         orgId = org['id']
-
+'''
 # Get Networks in Org
 params = {}
 params['organization_id'] = orgId
@@ -51,3 +51,4 @@ result = meraki.vlans.update_network_vlan(updatedVlan)
 # VERIFY
 vlans = meraki.vlans.get_network_vlans(netId)
 pprint(vlans)
+'''

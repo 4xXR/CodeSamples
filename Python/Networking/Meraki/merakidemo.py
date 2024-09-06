@@ -15,7 +15,7 @@ headers = {
     'cache-control': "no-cache"
 }
 
-response = requests.get(url, headers=headers).json()
+response = requests.get(url, headers = headers).json()
 
 #print(json.dumps(response, indent=2, sort_keys=True))
 

@@ -10,7 +10,7 @@ payload = {
     "aaaUser": {
         "attributes": {
             "name": "admin",
-            "pwd": "ciscopsdt"
+            "pwd": "!v3G@!4@Y"
         }
     }
 }
@@ -31,7 +31,7 @@ cookie['APIC-cookie'] = token
 
 ######### GET APN ##############
 # GET APPLICATION PROFILE
-url = "https://sandboxapicdc.cisco.com:443/api/node/mo/uni/tn-Heroes/ap-Save_The_Planet.json"
+url = "https://sandboxapicdc.cisco.com:443/api/node/mo/uni/tn-Heroes/ap-Web.json"
 
 headers = {
     'cache-control': "no-cache"
@@ -40,24 +40,24 @@ headers = {
 get_response = requests.get(
     url, headers=headers, cookies=cookie, verify=False).json()
 
-print(json.dumps(get_response, indent=2, sort_keys=True))
+# print(json.dumps(get_response, indent=2, sort_keys=True))
 
 
 ########## UPDATE APN DESCRIPTION #############
 # SET DESCRIPTION
-# post_payload = {
-#     "fvAp": {
-#         "attributes": {
-#             "descr": "",
-#             "dn": "uni/tn-Heroes/ap-Save_The_Planet"
-#         }
-#     }
-# }
+post_payload = {
+    "fvAp": {
+        "attributes": {
+            "descr": "",
+            "dn": "uni/tn-Heroes/ap-Web"
+        }
+    }
+}
 
-# post_response = requests.post(
-#     url, headers=headers, cookies=cookie, verify=False, data=json.dumps(post_payload)).json()
+post_response = requests.post(
+    url, headers=headers, cookies=cookie, verify=False, data=json.dumps(post_payload)).json()
 
-# get_response = requests.get(
-#     url, headers=headers, cookies=cookie, verify=False).json()
+get_response = requests.get(
+    url, headers=headers, cookies=cookie, verify=False).json()
 
-# print(json.dumps(get_response, indent=2, sort_keys=True))
+print(json.dumps(get_response, indent=2, sort_keys=True))
